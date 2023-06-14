@@ -5,7 +5,6 @@ import {
   HStack,
   Image,
   IconButton,
-  Button,
   Menu,
   MenuButton,
   useDisclosure,
@@ -31,7 +30,7 @@ const Header = () => {
             onClick={isOpen ? onClose : onOpen}
           />
           <HStack spacing={8} alignItems={"center"}>
-            <Box w="5rem">
+            <Box w="5rem" as={"a"} href={"/"}>
               <Image
                 w={"full"}
                 h={"full"}
@@ -52,10 +51,14 @@ const Header = () => {
           </HStack>
           <Flex alignItems={"center"} justifyContent={"space-evenly"}>
             <FaRegBell size="1.5rem" />
-            <FaVideo size="1.5rem" style={{ marginLeft: "2rem" }} />
+            <FaVideo
+              size="1.5rem"
+              style={{ marginLeft: "2rem", marginRight: "2rem" }}
+            />
             <Menu>
               <MenuButton
-                as={Button}
+                as={"a"}
+                href={"/login"}
                 rounded={"full"}
                 variant={"link"}
                 cursor={"pointer"}

@@ -1,6 +1,7 @@
 import SmallCard from "./SmallCard";
 import { Flex, Stack } from "@chakra-ui/react";
 import { useState, useEffect } from "react";
+import AdCard from "./AdCard";
 import axios from "axios";
 const SideBar = () => {
   const [data, setData] = useState([]);
@@ -26,6 +27,7 @@ const SideBar = () => {
       >
         <Stack spacing="8" align="flex-start">
           <Stack spacing="8" align="flex-start">
+            <AdCard />
             {data.map((item, id) => (
               <SmallCard
                 key={id}
