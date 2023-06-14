@@ -7,7 +7,9 @@ const SideBar = () => {
   const [data, setData] = useState([]);
   const getYoutubeData = async () => {
     const response = await axios.get(
-      "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=reactjs&key=AIzaSyAKymzy1wBP-jRmfPOAq3PJ1fBh9vOHP1g"
+      `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=reactjs&key=${
+        import.meta.env.VITE_KEY
+      })}`
     );
 
     setData(response.data.items);
