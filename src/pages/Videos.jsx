@@ -27,9 +27,6 @@ const Videos = () => {
   };
   const handleComment = () => {
     setComments([...comments, comment]);
-    console.log("====================================");
-    console.log(comments);
-    console.log("====================================");
   };
 
   return (
